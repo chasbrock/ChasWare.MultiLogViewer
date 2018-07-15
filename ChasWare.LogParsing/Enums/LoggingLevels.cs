@@ -5,7 +5,7 @@
         Debug,
         Info,
         Warn,
-        Error, 
+        Error,
         Fatal
     }
 }

@@ -1,6 +1,6 @@
-﻿using ChasWare.MultiLogViewer.Common.Helpers;
+﻿using ChasWare.LogParsing.Models;
+using ChasWare.MultiLogViewer.Common.Helpers;
 using ChasWare.MultiLogViewer.Common.ViewModels.ChasWare.Utils.ViewModels;
-using ChasWare.MultiLogViewer.Models;
 
 namespace ChasWare.MultiLogViewer.ViewModels
 {
@@ -29,11 +29,11 @@ namespace ChasWare.MultiLogViewer.ViewModels
             set => SetField(_model, value);
         }
 
-        public BasicCommand BringToFrontCommand { get; set; }
+        public SimpleCommand BringToFrontCommand { get; set; }
 
         public string Format
         {
-            get => _model.Format;
+            get => _model.Pattern;
             set => SetField(_model, value);
         }
 
@@ -61,8 +61,8 @@ namespace ChasWare.MultiLogViewer.ViewModels
             set => SetField(_model, value);
         }
 
-        public BasicCommand OpenSettingsCommand { get; set; }
-        public BasicCommand ToggleOpenStatusCommand { get; set; }
+        public SimpleCommand OpenSettingsCommand { get; set; }
+        public SimpleCommand ToggleOpenStatusCommand { get; set; }
 
         #endregion
 

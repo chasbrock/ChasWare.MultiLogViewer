@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ChasWare.LogParsing.Enums;
-using ChasWare.MultiLogViewer.Interfaces;
+using ChasWare.LogParsing.Interfaces;
+using ChasWare.LogParsing.Models;
 
 namespace ChasWare.MultiLogViewer.Models
 {
@@ -10,13 +11,13 @@ namespace ChasWare.MultiLogViewer.Models
 
         public Log4NetLoggingModel()
         {
-            Levels = new List<LoggingLevel>
+            Levels = new List<LoggerLevels>
                 {
-                    new LoggingLevel(LoggingLevels.Debug, false),
-                    new LoggingLevel(LoggingLevels.Info, false),
-                    new LoggingLevel(LoggingLevels.Warn, true),
-                    new LoggingLevel(LoggingLevels.Error, true),
-                    new LoggingLevel(LoggingLevels.Fatal, true)
+                    new LoggerLevels(LoggingLevels.Debug, false),
+                    new LoggerLevels(LoggingLevels.Info, false),
+                    new LoggerLevels(LoggingLevels.Warn, true),
+                    new LoggerLevels(LoggingLevels.Error, true),
+                    new LoggerLevels(LoggingLevels.Fatal, true)
                 };
         }
 
@@ -24,7 +25,7 @@ namespace ChasWare.MultiLogViewer.Models
 
         #region public properties
 
-        public IList<LoggingLevel> Levels { get; }
+        public IList<LoggerLevels> Levels { get; }
 
         #endregion
     }

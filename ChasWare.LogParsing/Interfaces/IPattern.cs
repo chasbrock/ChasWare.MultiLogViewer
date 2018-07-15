@@ -3,14 +3,14 @@
 namespace ChasWare.LogParsing.Interfaces
 {
     /// <summary>
-    /// defines a patternelement
+    ///     defines a patternelement
     /// </summary>
     public interface IPattern
     {
         #region public properties
 
         /// <summary>
-        /// Gets the name of the pattern
+        ///     Gets the name of the pattern
         /// </summary>
         PatternName PatternName { get; }
 

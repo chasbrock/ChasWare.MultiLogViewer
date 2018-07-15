@@ -7,9 +7,10 @@
 using System;
 using System.Collections.Generic;
 using Autofac;
+using ChasWare.LogParsing.Interfaces;
+using ChasWare.LogParsing.Models;
 using ChasWare.MultiLogViewer.Common.Helpers;
 using ChasWare.MultiLogViewer.Common.ViewModels;
-using ChasWare.MultiLogViewer.Interfaces;
 using ChasWare.MultiLogViewer.Models;
 
 namespace ChasWare.MultiLogViewer.ViewModels
@@ -48,10 +49,14 @@ namespace ChasWare.MultiLogViewer.ViewModels
 
         public string Filter { get; set; }
         public DateTime FromDateTime { get; set; }
-        public IEnumerable<LoggingLevel> LogLevels => _model.Levels;
-        public BasicCommand RefreshFilesCommand { get; set; }
+        public IEnumerable<LoggerLevels> LogLevels => _model.Levels;
+        public SimpleCommand RefreshFilesCommand { get; set; }
+        public SimpleCommand TileHorizontallyCommand { get; set; }
+        public SimpleCommand TileVerticallyCommand { get; set; }
+        public SimpleCommand CascadeCommand { get; set; }
         public DateTime ToDateTime { get; set; }
 
+       
         #endregion
     }
 }

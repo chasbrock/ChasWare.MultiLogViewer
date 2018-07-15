@@ -1,4 +1,4 @@
-﻿using ChasWare.MultiLogViewer.Interfaces;
+﻿using ChasWare.LogParsing.Interfaces;
 using ChasWare.MultiLogViewer.Models;
 
 namespace ChasWare.MultiLogViewer.Services

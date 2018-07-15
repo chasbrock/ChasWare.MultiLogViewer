@@ -1,28 +1,15 @@
-﻿using System.Collections.Generic;
-using ChasWare.LogParsing.Enums;
+﻿using ChasWare.LogParsing.Enums;
 
-namespace ChasWare.MultiLogViewer.Interfaces
+namespace ChasWare.LogParsing.Models
 {
-    /// <summary>
-    ///     model to manage logging levels
-    /// </summary>
-    public interface ILoggingModel
-    {
-        #region public properties
-
-        IList<LoggingLevel> Levels { get; }
-
-        #endregion
-    }
-
     /// <summary>
     ///     encapsulates logging level
     /// </summary>
-    public class LoggingLevel
+    public class LoggerLevels
     {
         #region Constructors
 
-        public LoggingLevel(LoggingLevels level, bool enabled)
+        public LoggerLevels(LoggingLevels level, bool enabled)
         {
             Level = level;
             Enabled = enabled;

@@ -15,8 +15,8 @@ namespace ChasWare.MultiLogViewer.Views
 
         public const string ConfigFileName = @".\AvalonDock.Layout.config";
 
-        private BasicCommand _loadLayoutCommand;
-        private BasicCommand _saveLayoutCommand;
+        private SimpleCommand _loadLayoutCommand;
+        private SimpleCommand _saveLayoutCommand;
 
         #endregion
 
@@ -31,8 +31,8 @@ namespace ChasWare.MultiLogViewer.Views
 
         #region public properties
 
-        public ICommand LoadLayoutCommand => _loadLayoutCommand ?? (_loadLayoutCommand = new BasicCommand(OnLoadLayout, CanLoadLayout));
-        public ICommand SaveLayoutCommand => _saveLayoutCommand ?? (_saveLayoutCommand = new BasicCommand(OnSaveLayout));
+        public ICommand LoadLayoutCommand => _loadLayoutCommand ?? (_loadLayoutCommand = new SimpleCommand(OnLoadLayout, CanLoadLayout));
+        public ICommand SaveLayoutCommand => _saveLayoutCommand ?? (_saveLayoutCommand = new SimpleCommand(OnSaveLayout));
 
         #endregion
 

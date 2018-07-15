@@ -2,7 +2,8 @@
 using System.Reflection;
 using System.Windows;
 using Autofac;
-using ChasWare.MultiLogViewer.Interfaces;
+using ChasWare.LogParsing.Interfaces;
+using ChasWare.LogParsing.Services;
 using ChasWare.MultiLogViewer.Services;
 using ChasWare.MultiLogViewer.ViewModels;
 using ChasWare.MultiLogViewer.Views;
@@ -33,7 +34,7 @@ namespace ChasWare.MultiLogViewer
             }
 
             var applicationDetailsService = _container.Resolve<IAppDetailsService>();
-            applicationDetailsService.FileName = configFileName;
+            applicationDetailsService.Name = configFileName;
         }
 
         #endregion

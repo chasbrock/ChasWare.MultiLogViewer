@@ -169,6 +169,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+     <Style TargetType="{x:Type Button}" x:Key="NormalButton">
+       
+    </Style>
 
     <Style TargetType="{x:Type TreeViewItem}">
         <Setter Property="IsExpanded" Value="{Binding Path=IsExpanded, Mode=TwoWay}" />

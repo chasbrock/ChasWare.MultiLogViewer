@@ -10,9 +10,6 @@ namespace ChasWare.LogParsing.Models
         [DataMember]
         public string AppName { get; set; }
 
-        [DataMember]
-        public string Pattern { get; set; }
-
         public bool IsOpen { get; set; }
 
         [DataMember]
@@ -20,6 +17,9 @@ namespace ChasWare.LogParsing.Models
 
         [DataMember]
         public bool OpenOnStartup { get; set; }
+
+        [DataMember]
+        public string Pattern { get; set; }
 
         #endregion
 

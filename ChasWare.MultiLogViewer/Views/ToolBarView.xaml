@@ -16,6 +16,13 @@
             <Button Command="{Binding RefreshFilesCommand}">
                 <Image Source="{StaticResource RefreshPng}" />
             </Button>
+            <Button Command="{Binding TileHorizontallyCommand}">
+                <Image Source="{StaticResource TileHorizontally}" />
+            </Button>   <Button Command="{Binding TileVerticallyCommand}">
+                <Image Source="{StaticResource TileVertically}" />
+            </Button>   <Button Command="{Binding CascadeCommand}">
+                <Image Source="{StaticResource Cascade}" />
+            </Button>
         </ToolBar>
 
         <ToolBar>
@@ -45,7 +52,7 @@
             <xctk:CheckComboBox ItemsSource="{Binding LogLevels}"
                                 Margin="4,0" Width="170"
                                 VerticalAlignment="Center"
-                                DisplayMemberPath="Name"
+                                DisplayMemberPath="Level"
                                 SelectedMemberPath="Enabled"
                                 IsEditable="False" />
         </ToolBar>

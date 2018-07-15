@@ -6,7 +6,7 @@ using ChasWare.LogParsing.Models;
 namespace ChasWare.LogParsing.Services
 {
     /// <inheritdoc />
-    internal class AppDetailsService : IAppDetailsService
+    public class AppDetailsService : IAppDetailsService
     {
         #region Constants and fields 
 

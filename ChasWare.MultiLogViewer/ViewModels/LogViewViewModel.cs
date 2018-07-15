@@ -1,5 +1,5 @@
-﻿using ChasWare.MultiLogViewer.Common.ViewModels;
-using ChasWare.MultiLogViewer.Models;
+﻿using ChasWare.LogParsing.Models;
+using ChasWare.MultiLogViewer.Common.ViewModels;
 
 namespace ChasWare.MultiLogViewer.ViewModels
 {

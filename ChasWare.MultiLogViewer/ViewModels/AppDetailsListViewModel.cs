@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Autofac;
+using ChasWare.LogParsing.Interfaces;
 using ChasWare.MultiLogViewer.Common.ViewModels.ChasWare.Utils.ViewModels;
-using ChasWare.MultiLogViewer.Interfaces;
 
 namespace ChasWare.MultiLogViewer.ViewModels
 {

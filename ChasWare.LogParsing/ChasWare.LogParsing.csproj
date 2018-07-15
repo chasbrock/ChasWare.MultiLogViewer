@@ -50,10 +50,13 @@
     <Compile Include="Enums\LoggingLevels.cs" />
     <Compile Include="Interfaces\IAppDetailsService.cs" />
     <Compile Include="Interfaces\ILogElement.cs" />
+    <Compile Include="Interfaces\ILoggingDetailService.cs" />
     <Compile Include="Interfaces\ILogParser.cs" />
     <Compile Include="Interfaces\IPattern.cs" />
     <Compile Include="Enums\PatternName.cs" />
+    <Compile Include="Models\LoggerLevels.cs" />
     <Compile Include="Models\AppDetailsModel.cs" />
+    <Compile Include="Interfaces\ILoggingModel.cs" />
     <Compile Include="Models\LogElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppDetailsService.cs" />

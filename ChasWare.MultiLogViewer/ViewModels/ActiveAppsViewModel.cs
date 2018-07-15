@@ -38,7 +38,7 @@ namespace ChasWare.MultiLogViewer.ViewModels
         /// <summary>
         ///     Gets or sets command to add new app
         /// </summary>
-        public BasicCommand AddAppCommand { get; set; }
+        public SimpleCommand AddAppCommand { get; set; }
 
         /// <summary>
         ///     Gets list of all app details

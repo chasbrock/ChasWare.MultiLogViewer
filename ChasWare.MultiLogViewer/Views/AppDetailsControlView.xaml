@@ -21,8 +21,8 @@
                     Command="{Binding BringToFrontCommand}"
                     Grid.Column="1" VerticalAlignment="Center" />
 
-            <Button Grid.Column="2" Command="{Binding OpenSettingsCommand}">
-                <Image Source="{StaticResource ResourceKey=RefreshPng}" />
+            <Button Grid.Column="2" Command="{Binding OpenSettingsCommand}" Style="{StaticResource NormalButton}">
+                <Image Source="{StaticResource ResourceKey=SettingsPng}" />
             </Button>
         </Grid>
     </Border>

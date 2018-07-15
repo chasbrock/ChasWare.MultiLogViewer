@@ -6,7 +6,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
     /// <summary>
     ///     simple implementation of ICommand
     /// </summary>
-    public class BasicCommand : ICommand
+    public class SimpleCommand : ICommand
     {
         #region Constants and fields 
 
@@ -18,7 +18,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
         #region Constructors
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="BasicCommand" /> class.
+        ///     Initializes a new instance of the <see cref="SimpleCommand" /> class.
         ///     Creates instance of ICommand implementation
         /// </summary>
         /// <param name="execute">
@@ -28,7 +28,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
         ///     delegate should return true if execution is allowed.
         ///     Supplying null will cause can execute to always return true;
         /// </param>
-        public BasicCommand(Action<object> execute, Predicate<object> canExecute = null)
+        public SimpleCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
             _canExecute = canExecute ?? AlwaysAllowExecution;
             _execute = execute;
@@ -38,7 +38,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
 
         #region public events, delegates and enums
 
-        /// <summary>Occurs when changes occur that affect whether or not the command should execute.</summary>
+        /// <inheritdoc />
         public event EventHandler CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
@@ -49,6 +49,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
 
         #region public methods
 
+        /// <inheritdoc />
         /// <summary>
         ///     Defines the method that determines whether the command can execute in its current state.
         /// </summary>
@@ -64,6 +65,7 @@ namespace ChasWare.MultiLogViewer.Common.Helpers
             return _canExecute(parameter);
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Defines the method to be called when the command is invoked.
         /// </summary>

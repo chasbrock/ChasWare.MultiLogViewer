@@ -23,11 +23,11 @@ namespace ChasWare.LogParsing.Services
         private readonly List<Pattern> _patterns = new List<Pattern>();
         private LogElement _currentElement;
         private int _currentOffset;
+        private string _dateFormat = Iso8061Date;
         private LogFilter _logFilter;
         private LogElement _priorElement;
         private bool _readingException;
         private StreamReader _stream;
-        private string _dateFormat = Iso8061Date;
 
         #endregion
 
@@ -82,7 +82,7 @@ namespace ChasWare.LogParsing.Services
                 }
 
                 // publish last record
-                if (_currentElement ?.IsValid(_dateFormat) ?? false)
+                if (_currentElement?.IsValid(_dateFormat) ?? false)
                 {
                     yield return _currentElement;
                 }
@@ -316,12 +316,13 @@ namespace ChasWare.LogParsing.Services
                     case PatternName.Level:
                         value = ReadField(line, pattern, i);
                         _currentElement.Level = Log4NetLevelParser.Parse(value);
-                        
+
                         // are we interested in this level
                         if (!_logFilter.LogLevels.Contains(_currentElement.Level))
                         {
                             return false;
                         }
+
                         break;
 
                     case PatternName.TimeStamp:

@@ -38,7 +38,7 @@ namespace ChasWare.MultiLogViewer.Common.ViewModels
 
         public ICommand CloseCommand
         {
-            get { return _closeCommand ?? (_closeCommand = new BasicCommand(call => Close())); }
+            get { return _closeCommand ?? (_closeCommand = new SimpleCommand(call => Close())); }
         }
 
         public bool IsClosed

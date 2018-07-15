@@ -37,12 +37,13 @@ namespace ChasWare.LogParsing.Services
             {
                 return null;
             }
-            
+
             int length = line.Length < offset + Length ? Length - offset : Length;
             if (length < 1)
             {
                 return null;
             }
+
             string value = line.Substring(offset, length).Trim();
             offset += length;
             return value;
@@ -75,15 +76,11 @@ namespace ChasWare.LogParsing.Services
             return value;
         }
 
-        #region Overrides of Object
-
         /// <inheritdoc />
         public override string ToString()
         {
             return PatternName.ToString();
         }
-
-        #endregion
 
         #endregion
     }

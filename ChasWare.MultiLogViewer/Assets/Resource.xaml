@@ -3,5 +3,8 @@
     <BitmapImage x:Key="RefreshPng" UriSource="../Resources/Refresh.png" />
     <BitmapImage x:Key="SettingsPng" UriSource="../Resources/Settings.png" />
     <BitmapImage x:Key="PropertiesPng" UriSource="../Resources/Properties.png" />
+    <BitmapImage x:Key="TileHorizontally" UriSource="../Resources/TileHorizontally.png" />
+    <BitmapImage x:Key="TileVertically" UriSource="../Resources/TileVertically.bmp" />
+    <BitmapImage x:Key="Cascade" UriSource="../Resources/Cascade.png" />
 
 </ResourceDictionary>

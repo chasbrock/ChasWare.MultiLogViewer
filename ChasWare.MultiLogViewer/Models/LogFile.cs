@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ChasWare.MultiLogViewer.Interfaces;
-
-namespace ChasWare.MultiLogViewer.Models
+﻿namespace ChasWare.MultiLogViewer.Models
 {
     internal class LogFile
     {
+        #region Constructors
+
         public LogFile(string fileName)
         {
             FileName = fileName;
         }
 
+        #endregion
+
+        #region public properties
+
         public string FileName { get; }
 
-
+        #endregion
     }
-
 }

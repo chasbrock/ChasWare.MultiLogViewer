@@ -6,11 +6,24 @@
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
         xmlns:viewModels="clr-namespace:ChasWare.MultiLogViewer.ViewModels"
         xmlns:views="clr-namespace:ChasWare.MultiLogViewer.Views"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1200">
+       
+ 
     <Window.DataContext>
         <viewModels:MainWindowViewModel />
     </Window.DataContext>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding DeserializeDockManager}" 
+                                   CommandParameter="{Binding ElementName=DockManager}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Closed" >
+            <i:InvokeCommandAction Command="{Binding SerializeDockManager}" 
+                                   CommandParameter="{Binding ElementName=DockManager}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -32,11 +45,10 @@
                             <xcad:LayoutAnchorable Title="Apps"
                                                    ContentId="Apps"
                                                    CanClose="False"
-                                                   CanHide="False"
+                                                   CanHide="True"
                                                    CanAutoHide="True"
                                                    CanFloat="False"
-                                                   AutoHideMinWidth="200"
-                                                   >
+                                                   AutoHideMinWidth="200">
                                 <ContentControl>
                                     <views:ActiveAppsView
                                         DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ActiveApps}" />
