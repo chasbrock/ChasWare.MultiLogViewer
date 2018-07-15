@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="RefreshPng" UriSource="../Resources/Refresh.png" />
+    <BitmapImage x:Key="SettingsPng" UriSource="../Resources/Settings.png" />
+    <BitmapImage x:Key="PropertiesPng" UriSource="../Resources/Properties.png" />
+
+</ResourceDictionary>

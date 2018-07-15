@@ -1,0 +1,184 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                    xmlns:drawing="clr-namespace:System.Drawing;assembly=System.Drawing">
+
+    <LinearGradientBrush x:Key="DarkBackGround" EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+        <GradientStop Color="#FFC0C8D0" />
+        <GradientStop Color="#FFD0D8F0" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LightBackGround" EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+        <GradientStop Color="#FFD0D8E0" />
+        <GradientStop Color="#FFF0F8F0" Offset="1" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="FlatBackGround" Color="#FFEEF5FD" />
+
+    <RadialGradientBrush x:Key="ButtonNormal"
+                         MappingMode="RelativeToBoundingBox"
+                         GradientOrigin="0.4,0.4"
+                         RadiusX="1"
+                         RadiusY="0.5">
+        <GradientStop Color="#FFFBFCFF" />
+        <GradientStop Color="#FFCFD6E0" Offset="1" />
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="ButtonBarBrush"
+                         MappingMode="RelativeToBoundingBox"
+                         GradientOrigin="0.4,0.4"
+                         RadiusX="1"
+                         RadiusY="0.5">
+        <GradientStop Color="#FFF0F0F0" />
+        <GradientStop Color="#FFD0D8E0" Offset="1" />
+    </RadialGradientBrush>
+
+
+    <DropShadowEffect x:Key="NormalShadow" BlurRadius="5" Direction="-90" ShadowDepth="1" />
+    <DropShadowEffect x:Key="SunkedShadow" BlurRadius="2" Direction="-90" ShadowDepth="0.1" />
+    <DropShadowEffect x:Key="RaisedShadow" BlurRadius="8" Direction="-90" ShadowDepth="2" />
+    <DropShadowEffect x:Key="RaisedLip" BlurRadius="2" Direction="-90" ShadowDepth="0.5" />
+
+    <Style TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style TargetType="{x:Type TabControl}">
+        <Setter Property="Background" Value="{StaticResource DarkBackGround}" />
+    </Style>
+
+    <Style TargetType="{x:Type ToolBarTray}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Effect" Value="{StaticResource RaisedLip}" />
+    </Style>
+
+    <Style TargetType="{x:Type ToolBar}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Effect" Value="{StaticResource RaisedLip}" />
+    </Style>
+
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Background" Value="{StaticResource DarkBackGround}" />
+    </Style>
+
+
+    <Style TargetType="{x:Type Border}" x:Key="BlockBorder">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderBrush" Value="Silver" />
+        <Setter Property="Background" Value="{StaticResource FlatBackGround}" />
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Effect" Value="{StaticResource RaisedLip}" />
+    </Style>
+
+    <Style TargetType="{x:Type Grid}" />
+
+    <Style TargetType="{x:Type Border}" x:Key="ButtonBar">
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Background" Value="{StaticResource ButtonBarBrush}" />
+    </Style>
+
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="4" />
+    </Style>
+
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Foreground" Value="Black" />
+        <Style.Triggers>
+            <Trigger Property="TextBox.IsReadOnly" Value="False">
+                <Setter Property="TextBox.Foreground" Value="Blue" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type ComboBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2,2,2,2" />
+    </Style>
+
+    <Style TargetType="{x:Type xctk:DateTimePicker}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2,2,2,2" />
+        <Setter Property="Effect" Value="{StaticResource RaisedLip}" />
+    </Style>
+
+    <Style TargetType="{x:Type xctk:CheckComboBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="2,2,2,2" />
+        <Setter Property="Effect" Value="{StaticResource RaisedLip}" />
+    </Style>
+
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource ButtonNormal}" />
+        <Setter Property="Margin" Value="1,2" />
+        <Setter Property="Effect" Value="{StaticResource NormalShadow}" />
+        <Setter Property="Padding" Value="4,4,4,4" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                        <StackPanel MinHeight="{TemplateBinding MinHeight}"
+                                    Background="{TemplateBinding Background}"
+                                    SnapsToDevicePixels="True">
+                            <TextBlock
+                                MaxWidth="{Binding Path=ActualWidth,RelativeSource={RelativeSource TemplatedParent}}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Text="{TemplateBinding Content}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Effect" Value="{x:Null}" />
+                            <Setter Property="Foreground" Value="DarkGray" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Effect" Value="{StaticResource RaisedShadow}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Effect" Value="{StaticResource SunkedShadow}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TreeViewItem}">
+        <Setter Property="IsExpanded" Value="{Binding Path=IsExpanded, Mode=TwoWay}" />
+        <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="FontWeight" Value="Bold" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

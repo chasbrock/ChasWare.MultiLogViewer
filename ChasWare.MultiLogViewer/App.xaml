@@ -1,9 +1,13 @@
 ﻿<Application x:Class="ChasWare.MultiLogViewer.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ChasWare.MultiLogViewer"
-             StartupUri="MainWindow.xaml">
+             Startup="OnAppStartup">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/ControlStyles.xaml" />
+                <ResourceDictionary Source="Assets/Resource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
